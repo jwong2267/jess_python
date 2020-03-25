@@ -29,7 +29,7 @@ numbers = [1, 2, 3, 4, 5]
 # Code here
 
 for number in numbers:
-    print(number += 5)
+    number += 5
     print(number)
 
 # ############# Q4. Iterate through the list and only print values that are divisible by 3 ############
