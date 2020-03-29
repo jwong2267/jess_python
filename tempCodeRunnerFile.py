@@ -1,11 +1,13 @@
-while True:
-    try:
-        user_int = int(input("Please choose an integer: "))
-    except :
-        continue
-    else:
-        break
-if user_int % 2 == 0:
-    print("even")
-else:
-    print("odd")
+WORD = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+word = []
+
+for char in WORD:
+    word.append(char)
+
+# Code here
+
+i = 2
+while i <= len(word):
+    word[i] = 0
+    i +=3
+print(word)

@@ -53,13 +53,11 @@ for char in WORD:
 
 # Code here
 
-for i, letter in enumerate(word):
-    i = 2
-    while i <= len(word):
-        word[i] = 0
-        i +=3
+i = 2
+while i <= len(word):
+    word[i] = 0
+    i +=3
 print(word)
-
 
 ############# Q4. Change the price of everything to 50 USING A LOOP and print the result ############
 # Topic: lists, loops, conditions, assignment operators
