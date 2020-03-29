@@ -12,6 +12,7 @@ while number <= 100:
     number += 1
 print(perfect_squares)
 
+
 ############# Q2. For the following list:
 # Print the values that are greater than 100
 # Add 1000 to any 100s
@@ -38,6 +39,7 @@ for i, number in enumerate(numbers):
 
 print(numbers)
 
+
 ############# Q3. Replace the 3rd "a" in the list "WORD" with a "0" USING A FOR LOOP and print the result ############
 # Topic: lists, loops, conditions, assignment operators
 # Hint: You need to use enumerate()
@@ -51,16 +53,12 @@ for char in WORD:
 
 # Code here
 
-for i, char in enumerate(word):
-    if i % 3 == 0:
-        word.remove(char)
-        word.insert(i, 0)
+for i, letter in enumerate(word):
+    i = 2
+    while i <= len(word):
+        word[i] = 0
+        i +=3
 print(word)
-
-
-
-
-
 
 
 ############# Q4. Change the price of everything to 50 USING A LOOP and print the result ############
@@ -83,14 +81,9 @@ transactions = {
 # Code here
 
 for person, purchase in transactions.items():
-    print(person, purchase)
-    for in purchase.items():
-        print(purchase, )
-
-
-
-
-
+    for item, prices in purchase.items():
+        transactions[person][item] = 50
+print(transactions)
 
 
 ############# Q5. Give every person's third purchase a 10% discount and print the result ############
@@ -117,15 +110,10 @@ transactions = {
 
 # Code here
 
-
-
-
-
-
-
-
-
-
+for person, purchase in transactions.items():
+    for item, price in purchase.items():
+        transactions[person][item] = round(price * 0.9, 2)
+print(transactions)
 
 
 ############# Q6. Find the SMALLEST number in the list 'numbers' below and print the value ############
@@ -136,15 +124,11 @@ numbers = random.sample(range(1, 1000), 999)
 
 # Code here
 
-
-
-
-
-
-
-
-
-
+minimum = numbers[0]
+for number in numbers:
+    if minimum > number:
+        minimum = number
+print minimum
 
 
 ############# Q7. Find the LARGEST number in the list below USING A FOR LOOP and print the value ############
@@ -155,3 +139,9 @@ numbers = random.sample(range(-1000, 1000), 999)
 print(numbers)
 
 # Code here
+
+maximum = numbers[0]
+for number in numbers:
+    if maximum < number:
+        maximum = number
+print maximum
