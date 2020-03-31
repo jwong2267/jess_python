@@ -1,11 +1,14 @@
-while True:
-    try:
-        user_int = int(input("Please choose an integer: "))
-        break
-    except :
-        continue
+WORD = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+word = []
 
-if user_int % 2 == 0:
-    print("even")
-else:
-    print("odd")
+for char in WORD:
+    word.append(char)
+
+# Code here
+
+for i, letter in enumerate(word):
+    i = 2
+    while i <= len(word):
+        word[i] = 0
+        i +=3
+print(word)
